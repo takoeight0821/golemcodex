@@ -16,7 +16,7 @@
       ],
       "vmArgs": [
         "@/Users/yuya/ghq/github.com/takoeight0821/golemcodex/build/moddev/clientRunVmArgs.txt",
-        "-Dfml.modFolders\u003dexamplemod%%/Users/yuya/ghq/github.com/takoeight0821/golemcodex/bin/main"
+        "-Dfml.modFolders\u003dgolemcodex%%/Users/yuya/ghq/github.com/takoeight0821/golemcodex/bin/main"
       ],
       "cwd": "${workspaceFolder}/run",
       "env": {},
@@ -38,7 +38,7 @@
       ],
       "vmArgs": [
         "@/Users/yuya/ghq/github.com/takoeight0821/golemcodex/build/moddev/dataRunVmArgs.txt",
-        "-Dfml.modFolders\u003dexamplemod%%/Users/yuya/ghq/github.com/takoeight0821/golemcodex/bin/main"
+        "-Dfml.modFolders\u003dgolemcodex%%/Users/yuya/ghq/github.com/takoeight0821/golemcodex/bin/main"
       ],
       "cwd": "${workspaceFolder}/run",
       "env": {},
@@ -60,7 +60,7 @@
       ],
       "vmArgs": [
         "@/Users/yuya/ghq/github.com/takoeight0821/golemcodex/build/moddev/gameTestServerRunVmArgs.txt",
-        "-Dfml.modFolders\u003dexamplemod%%/Users/yuya/ghq/github.com/takoeight0821/golemcodex/bin/main"
+        "-Dfml.modFolders\u003dgolemcodex%%/Users/yuya/ghq/github.com/takoeight0821/golemcodex/bin/main"
       ],
       "cwd": "${workspaceFolder}/run",
       "env": {},
@@ -82,7 +82,7 @@
       ],
       "vmArgs": [
         "@/Users/yuya/ghq/github.com/takoeight0821/golemcodex/build/moddev/serverRunVmArgs.txt",
-        "-Dfml.modFolders\u003dexamplemod%%/Users/yuya/ghq/github.com/takoeight0821/golemcodex/bin/main"
+        "-Dfml.modFolders\u003dgolemcodex%%/Users/yuya/ghq/github.com/takoeight0821/golemcodex/bin/main"
       ],
       "cwd": "${workspaceFolder}/run",
       "env": {},
