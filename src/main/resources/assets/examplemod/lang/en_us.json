@@ -1,5 +1,5 @@
 {
-  "itemGroup.examplemod": "Example Mod Tab",
-  "block.examplemod.example_block": "Example Block",
-  "item.examplemod.example_item": "Example Item"
+  "itemGroup.golemcodex": "Example Mod Tab",
+  "block.golemcodex.example_block": "Example Block",
+  "item.golemcodex.example_item": "Example Item"
 }
