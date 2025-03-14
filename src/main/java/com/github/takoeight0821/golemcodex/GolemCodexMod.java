@@ -84,6 +84,7 @@ public class GolemCodexMod {
                     .displayItems((parameters, output) -> {
                         output.accept(EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this
                                                            // method is preferred over the event
+                        output.accept(EXAMPLE_BLOCK_ITEM.get());
                     }).build());
 
     // The constructor for the mod class is the first code that is run when your mod
