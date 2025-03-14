@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package com.github.takoeight0821.examplemod;
 
 import org.slf4j.Logger;
 
