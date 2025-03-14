@@ -12,12 +12,13 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import com.github.takoeight0821.golemcodex.GolemCodexMod;
+import com.github.takoeight0821.golemcodex.blocks.ModBlocks;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(GolemCodexMod.MODID);
 
     public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block",
-            GolemCodexMod.EXAMPLE_BLOCK);
+            ModBlocks.EXAMPLE_BLOCK);
 
     public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item",
             new Item.Properties().food(new FoodProperties.Builder()

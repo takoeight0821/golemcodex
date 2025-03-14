@@ -12,10 +12,7 @@ import java.net.InetSocketAddress;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -27,8 +24,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredRegister;
+import com.github.takoeight0821.golemcodex.blocks.ModBlocks;
 import com.github.takoeight0821.golemcodex.items.ModItems;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -38,14 +34,6 @@ public class GolemCodexMod {
     public static final String MODID = "golemcodex";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under
-    // the "golemcodex" namespace
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MODID);
-
-    // Creates a new Block with the id "golemcodex:example_block", combining the
-    // namespace and path
-    public static final DeferredBlock<Block> EXAMPLE_BLOCK = BLOCKS.registerSimpleBlock("example_block",
-            BlockBehaviour.Properties.of().mapColor(MapColor.STONE));
 
     // The constructor for the mod class is the first code that is run when your mod
     // is loaded.
@@ -55,8 +43,7 @@ public class GolemCodexMod {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
-        BLOCKS.register(modEventBus);
+        ModBlocks.register(modEventBus);
         ModItems.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
