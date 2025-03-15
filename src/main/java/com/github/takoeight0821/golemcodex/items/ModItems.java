@@ -2,7 +2,6 @@ package com.github.takoeight0821.golemcodex.items;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -15,30 +14,30 @@ import com.github.takoeight0821.golemcodex.GolemCodexMod;
 import com.github.takoeight0821.golemcodex.blocks.ModBlocks;
 
 public class ModItems {
-    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(GolemCodexMod.MODID);
+        public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(GolemCodexMod.MODID);
 
-    public static final DeferredItem<BlockItem> EXAMPLE_BLOCK_ITEM = ITEMS.registerSimpleBlockItem("example_block",
-            ModBlocks.EXAMPLE_BLOCK);
+        public static final DeferredItem<BlockItem> LIVING_CLAY_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
+                        "living_clay_block",
+                        ModBlocks.LIVING_CLAY_BLOCK);
 
-    public static final DeferredItem<Item> EXAMPLE_ITEM = ITEMS.registerSimpleItem("example_item",
-            new Item.Properties().food(new FoodProperties.Builder()
-                    .alwaysEdible().nutrition(1).saturationModifier(2f).build()));
+        public static final DeferredItem<Item> LIVING_CLAY_ITEM = ITEMS.registerSimpleItem("living_clay",
+                        new Item.Properties());
 
-    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
-            .create(Registries.CREATIVE_MODE_TAB, GolemCodexMod.MODID);
+        public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
+                        .create(Registries.CREATIVE_MODE_TAB, GolemCodexMod.MODID);
 
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS
-            .register("example_tab", () -> CreativeModeTab.builder()
-                    .title(Component.translatable("itemGroup.golemcodex"))
-                    .withTabsBefore(CreativeModeTabs.COMBAT)
-                    .icon(() -> ModItems.EXAMPLE_ITEM.get().getDefaultInstance())
-                    .displayItems((parameters, output) -> {
-                        ITEMS.getEntries().forEach(entry -> output.accept(entry.get()));
-                    }).build());
+        public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GOLEM_CODEX_TAB = CREATIVE_MODE_TABS
+                        .register("golemcodex_tab", () -> CreativeModeTab.builder()
+                                        .title(Component.translatable("itemGroup.golemcodex"))
+                                        .withTabsBefore(CreativeModeTabs.COMBAT)
+                                        .icon(() -> ModItems.LIVING_CLAY_ITEM.get().getDefaultInstance())
+                                        .displayItems((parameters, output) -> {
+                                                ITEMS.getEntries().forEach(entry -> output.accept(entry.get()));
+                                        }).build());
 
-    public static void register(IEventBus modEventBus) {
-        ITEMS.register(modEventBus);
+        public static void register(IEventBus modEventBus) {
+                ITEMS.register(modEventBus);
 
-        CREATIVE_MODE_TABS.register(modEventBus);
-    }
+                CREATIVE_MODE_TABS.register(modEventBus);
+        }
 }

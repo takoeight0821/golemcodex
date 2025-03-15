@@ -1,5 +1,5 @@
 {
-  "itemGroup.golemcodex": "Example Mod Tab",
-  "block.golemcodex.example_block": "Example Block",
-  "item.golemcodex.example_item": "Example Item"
+  "itemGroup.golemcodex": "Golem Codex",
+  "block.golemcodex.living_clay_block": "Living Clay Block",
+  "item.golemcodex.living_clay": "Living Clay"
 }
