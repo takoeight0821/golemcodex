@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "golemcodex:living_clay"
+              "name": "golemcodex:living_clay_ball"
             },
             {
               "type": "minecraft:item",
@@ -40,7 +40,7 @@
                   "function": "minecraft:explosion_decay"
                 }
               ],
-              "name": "golemcodex:living_clay"
+              "name": "golemcodex:living_clay_ball"
             }
           ]
         }

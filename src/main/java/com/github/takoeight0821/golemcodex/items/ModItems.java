@@ -16,11 +16,11 @@ import com.github.takoeight0821.golemcodex.blocks.ModBlocks;
 public class ModItems {
         public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(GolemCodexMod.MODID);
 
-        public static final DeferredItem<BlockItem> LIVING_CLAY_BLOCK_ITEM = ITEMS.registerSimpleBlockItem(
+        public static final DeferredItem<BlockItem> LIVING_CLAY_BLOCK = ITEMS.registerSimpleBlockItem(
                         "living_clay_block",
                         ModBlocks.LIVING_CLAY_BLOCK);
 
-        public static final DeferredItem<Item> LIVING_CLAY_ITEM = ITEMS.registerSimpleItem("living_clay",
+        public static final DeferredItem<Item> LIVING_CLAY_BALL = ITEMS.registerSimpleItem("living_clay_ball",
                         new Item.Properties());
 
         public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister
@@ -30,7 +30,7 @@ public class ModItems {
                         .register("golemcodex_tab", () -> CreativeModeTab.builder()
                                         .title(Component.translatable("itemGroup.golemcodex"))
                                         .withTabsBefore(CreativeModeTabs.COMBAT)
-                                        .icon(() -> ModItems.LIVING_CLAY_ITEM.get().getDefaultInstance())
+                                        .icon(() -> ModItems.LIVING_CLAY_BALL.get().getDefaultInstance())
                                         .displayItems((parameters, output) -> {
                                                 ITEMS.getEntries().forEach(entry -> output.accept(entry.get()));
                                         }).build());
