@@ -16,9 +16,9 @@ import com.github.takoeight0821.golemcodex.blocks.ModBlocks;
 public class ModItems {
         public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(GolemCodexMod.MODID);
 
-        public static final DeferredItem<BlockItem> LIVING_CLAY_BLOCK = ITEMS.registerSimpleBlockItem(
-                        "living_clay_block",
-                        ModBlocks.LIVING_CLAY_BLOCK);
+        public static final DeferredItem<BlockItem> LIVING_CLAY = ITEMS.registerSimpleBlockItem(
+                        "living_clay",
+                        ModBlocks.LIVING_CLAY);
 
         public static final DeferredItem<Item> LIVING_CLAY_BALL = ITEMS.registerSimpleItem("living_clay_ball",
                         new Item.Properties());

@@ -26,7 +26,7 @@
                   }
                 }
               ],
-              "name": "golemcodex:living_clay_ball"
+              "name": "golemcodex:living_clay"
             },
             {
               "type": "minecraft:item",
@@ -48,5 +48,5 @@
       "rolls": 1
     }
   ],
-  "random_sequence": "golemcodex:blocks/living_clay_block"
+  "random_sequence": "golemcodex:blocks/living_clay"
 }

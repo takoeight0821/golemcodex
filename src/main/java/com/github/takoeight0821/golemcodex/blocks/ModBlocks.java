@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(GolemCodexMod.MODID);
 
-    public static final DeferredBlock<Block> LIVING_CLAY_BLOCK = BLOCKS.registerSimpleBlock("living_clay_block",
+    public static final DeferredBlock<Block> LIVING_CLAY = BLOCKS.registerSimpleBlock("living_clay",
             // This block behaves like a clay block
             BlockBehaviour.Properties.ofFullCopy(Blocks.CLAY));
 
